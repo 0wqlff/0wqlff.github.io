@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <style>
+        .subjectbuttonimg{width:150px; height:200px; object-fit: fill;}
+        .subjectbutton{width:150px; height:200px; color:transparent; padding:2px; margin:2px; border:none}
+        .subjectbutton:hover{border: 2px solid;border-color: #fd9700; color: #fd9700;}
+        .subjectbuttonimg:hover{display: none; transition: display 3s ease;}
+    </style>
+    <head>   
         <link rel="stylesheet" href="web.css">
     </head>
     <body>
-        <h1>Home</h1>
+        <h1>Notes</h1>
         <navibar>
             <ul>
                 <li><button class="navibar" onclick="document.location='index.html'">Home</button></li>
@@ -13,5 +19,6 @@
                 <li><button class="navibar" onclick="document.location='pastexams.html'"></button></li>
             </ul>
         </navibar>
+        <button class="subjectbutton"><img  class="subjectbuttonimg" src="media/Hcompsci.png">Higher Computing</button> 
     </body>
 </html>

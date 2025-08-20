@@ -1,1 +1,60 @@
+h1{
+    color:#fd9700;
+    font-family: Arial;
+    font-size:36px ;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+.navibar{
+    width:25px;
+    height: 100px;
+    background-color: #FFF6F0;
+    border: 2px solid;
+    border-color:#fd9700; 
+    color: transparent;
+    font-family: Arial;
+    font-size: 42px; 
+    
+}
 
+.navibar:hover{
+    width:200px;
+    height: 100px;
+    background-color: #fd9700;
+    border: 2px solid;
+    border-color:#fd9700; 
+    color: #FFF6F0;
+    font-family: Arial;
+    font-size: 42px;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+navibar ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    left:0
+}
+
+navibar ul li{
+    margin: -1px
+}
+
+button{
+    background-color: #FFF6F0;
+    border: 2px solid;
+    border-color:#fd9700; 
+
+}
+
+body{
+    font-family:arial;
+    background-color: #FFF6F0;
+    margin: 1px;
+    padding: 0px;
+}
