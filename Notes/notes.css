@@ -1,4 +1,11 @@
 header{
+    padding-bottom: 10px;
     border-bottom: 2px solid;
     border-bottom-color:black;
+}
+
+h1{
+    font-family:"Arial";
+    font-size: 36px;
+    text-align: center;
 }
