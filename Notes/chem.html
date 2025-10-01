@@ -57,18 +57,41 @@
             <li>Chemical Analysis</li>
         </ul>
         <br style="border-color:#0C458E; border: 2px solid">
-        <h2><u><b>Chemical Changes and Structure</b></u></h2>
+        <h2><u><b>Notes</b></u></h2>
         <ul>
             <li><a href="../Resources/Chemrates.pdf">Rates</a></li>
             <li><a>Periodicity</a></li>
         </ul>
-        <h2><u>Periodicity</u></h2>
-        <p style="text-align: center;"><b>Increasing atomic number results in an increasing nuclear charge <br> Increasing number of occupied electron shells results in an increasing screening effect</b></p>
+        <h2><u><b>Questions</b></u></h2>
         <ul>
             <li></li>
             <li>Covalent radius: Decreases across a period (nuclear charge), Increases down a group (Occupied electron shells)</li>
             <li>First Ionisation E: Increases across a period (nuclear charge), Decreases down a group (Screening effect)</li>
             <li>Electronegativity: Increases across a period, Decreases down a group (Screening effect)</li>
+            <input style="background-color: #c6fbff; border: none"id="pleasework"/>
         </ul>
     </body>
+    <script>
+        const input=document.getElementById("pleasework");
+            input.addEventListener("keyup", function(event) {
+                if (event.key === "Enter") {
+                    if (input.value=="hello") {
+                        input.value=""
+                        input.placeholder="Correct!"
+                        input.style.color="green"
+                    }
+                    else if (input.value=="reset"){
+                        input.value=""
+                        input.placeholder="yes"
+                        input.style.color="black"
+                    }
+                    else {
+                        input.value=""
+                        input.style.color="red"
+                        input.placeholder="Wrong!"
+                    }
+
+        }
+            })
+    </script>
 </html>
