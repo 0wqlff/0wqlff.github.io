@@ -65,9 +65,6 @@
         <h2><u><b>Questions</b></u></h2>
         <ul>
             <li></li>
-            <li>Covalent radius: Decreases across a period (nuclear charge), Increases down a group (Occupied electron shells)</li>
-            <li>First Ionisation E: Increases across a period (nuclear charge), Decreases down a group (Screening effect)</li>
-            <li>Electronegativity: Increases across a period, Decreases down a group (Screening effect)</li>
             <input style="background-color: #c6fbff; border: none"id="pleasework"/>
         </ul>
     </body>
@@ -93,5 +90,16 @@
 
         }
             })
+
+        async function loadQ() {
+            try{
+                const response = await fetch("test.json");
+                const questions = await response.json();
+                displayQuestions(questions);
+            } catch (error) {
+                console.error('Error loading questions:', error);
+            }
+            }
+        
     </script>
 </html>
