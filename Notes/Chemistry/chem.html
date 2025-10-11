@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../notes.css">
+        <style>
+        h1{
+            font-size:72px;
+            color:#0C458E;
+            position: relative;
+            top: 25px;
+        }
+        header{
+            border-color:#0C458E;
+            background-color: #9db5e7;
+        }
+        body{
+            background-color: #dde7ff;
+            color:#0C458E;
+        }
+        </style>
+    </head>
+    <header>
+        <h1>Chemistry</h1>
+    </header>
+    <body>
+        <svg class="backbutton" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" onclick="document.location='../../notes.html'" style="width:100px; height:100px">
+            <rect width="100" height="100px" fill="none" />
+            <line x1="80" y1="50" x2="40" y2="50" stroke="currentColor" stroke-width="5" />
+            <polygon points="40,35 20,50 40,65" fill="none" stroke="currentColor" stroke-width="5" />
+            <rect x="85" y="43" width="5" height="14" fill="none" stroke="currentColor" stroke-width="3" />
+        </svg>
+        <ul class="list-horizontal" style="text-align: center";>
+            <li><b>Chemical Changes and Structure</b></li>
+            <li>Periodicity</li>
+            <li>Structure and Bonding</li>
+            <li>Oxidising and Reducing Agents</li>
+            <li><b>Organic Chemistry</b></li>
+            <li>Systematic Carbon Chemistry</li>
+            <li>Alcohols</li>
+            <li>Carboxylic Acids</li>
+            <li>Esters</li>
+            <li>Fats and Oils</li>
+            <li>Soaps</li>
+            <li>Carboxylic acids</li>
+            <li>Esters</li>
+            <li>Fats and Oils</li>
+            <li>Soaps</li>
+            <li>Detergents and Emulsions</li>
+            <li>Proteins</li>
+            <li>Oxidation of Foods</li>
+            <li>Fragances</li>
+            <li>Skin Care</li>
+            <li><b>Societal Chemistry</b></li>
+            <li>Getting the most from Reactants </li>
+            <li>Controlling the Rate</li>
+            <li>Chemical Energy</li>
+            <li>Equilibria</li>
+            <li>Chemical Analysis</li>
+        </ul>
+        <br style="border-color:#0C458E; border: 2px solid">
+        <h2><u><b>Notes</b></u></h2>
+        <ul>
+            <li><a href="../Resources/Chemrates.pdf">Rates</a></li>
+            <li><a>Periodicity</a></li>
+        </ul>
+        <h2><u><b>Questions</b></u></h2>
+        <ul>
+            <select id="quiz-select"> 
+                <option value="chem.json">chem</option>
+                <option value="test.json">test</option>
+            </select>
+            <input style="background-color: #c6fbff; border: none; width:500px"id="pleasework"/>
+        </ul>
+        <div id="quiz-container">
+            <div id="question" class="question"></div>
+            <input type="text" id="answer-input" placeholder="Type your answer here" />
+            <button id="load-quiz-btn"></button>
+          </div>
+    </body>
+    <script src="chem.js"></script>
+</html>
