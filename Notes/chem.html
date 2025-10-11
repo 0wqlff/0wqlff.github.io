@@ -69,16 +69,22 @@
             <li>First Ionisation E: Increases across a period (nuclear charge), Decreases down a group (Screening effect)</li>
             <li>Electronegativity: Increases across a period, Decreases down a group (Screening effect)</li>
             <input style="background-color: #c6fbff; border: none"id="pleasework"/>
+            <p id="scores" placeholder="ahahahaha"></p>
         </ul>
     </body>
     <script>
+        let score = 0
         const input=document.getElementById("pleasework");
+        const p=document.getElementById("scores");
             input.addEventListener("keyup", function(event) {
                 if (event.key === "Enter") {
                     if (input.value=="hello") {
+                        score++
                         input.value=""
-                        input.placeholder="Correct!"
+                        input.placeholder="Correct! "+score
                         input.style.color="green"
+                        p.value=score
+                        
                     }
                     else if (input.value=="reset"){
                         input.value=""
@@ -90,7 +96,6 @@
                         input.style.color="red"
                         input.placeholder="Wrong!"
                     }
-
         }
             })
     </script>
