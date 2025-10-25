@@ -53,3 +53,14 @@ body{
 .backbutton:hover{
   color:#fd7900 !important
 }
+
+#quiz-container{
+  position: relative;
+  text-align: center;
+  padding-left: -250px;
+}
+
+#quiz-container input{
+  border-color: transparent;
+  margin-top: 100px;
+}
