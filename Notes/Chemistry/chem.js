@@ -6,9 +6,9 @@ let currentstreak=0;
 
 async function loadQuestions(jsonFile) {
   try {
-    const response = await fetch(jsonFile);
-    if (!response.ok) throw new Error('Failed to load questions');
-    questions = await response.json();
+    const response = await fetch(jsonFile); //subs in selected json on page
+    if (!response.ok) throw new Error('Failed to load questions'); //i beg this never happens 
+    questions = await response.json(); //questions is the array in the json
 
 
     currentQuestionIndex = 0;
@@ -44,9 +44,13 @@ function showQuestion() {
 function checkAnswer() {
   const inputEl = document.getElementById('answer-input');
   const userAnswer = inputEl.value.trim();
-  const correctAnswer = questions[currentQuestionIndex].answer;
-
-  if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+  for(const answer of questions[currentQuestionIndex].answers) {
+    if (userAnswer===answer)
+  
+  }
+  //const correctAnswer = questions[currentQuestionIndex].answers;
+  console.log(correctAnswer);
+  if (userAnswer.toLowerCase() === String.prototype.toLowerCase.call(correctAnswer)) {
     score++
     currentstreak++
     alert('✅ Correct!');
