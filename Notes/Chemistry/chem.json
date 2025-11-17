@@ -1,7 +1,10 @@
 [
     {
-      "question": "What is the capital of France?",
-      "answer": "Paris"
+      "question": "What is the trend from",
+      "answers": [
+        {
+          "answer": "Paris"
+        }]
     },
     {
       "question": "Which language runs in a web browser?",
