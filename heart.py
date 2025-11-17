@@ -14,7 +14,7 @@ color("red")
 ht()
 up()
 goto(-30,200)
-write("A+L", font=("arial",24,"normal"))
+write("B+S", font=("arial",24,"normal"))
 for i in range(6000):
     goto(hearta(i)*20,heartb(i)*20)
     down()

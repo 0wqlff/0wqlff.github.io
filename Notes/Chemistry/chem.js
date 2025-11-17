@@ -32,7 +32,7 @@ function showQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
 
   if (!currentQuestion) {
-    document.getElementById('quiz-container').innerHTML = `<h2> Quiz Completed! You got ${score}, with a longest streak of ${longeststreak}</h2>`; 
+    document.getElementById('quiz-container').innerHTML = `<h2> Quiz Completed! You got ${score}/${currentQuestionIndex}, with a longest streak of ${longeststreak}</h2>`; 
     return;
   } 
 
@@ -44,30 +44,35 @@ function showQuestion() {
 function checkAnswer() {
   const inputEl = document.getElementById('answer-input');
   const userAnswer = inputEl.value.trim();
-  for(const answer of questions[currentQuestionIndex].answers) {
-    if (userAnswer===answer)
-  
+  const correctAnswer = questions[currentQuestionIndex].answers;
+  let isRight = false;
+
+  for(let i = 0; i < questions[currentQuestionIndex].answers.length; i++) {
+    if (userAnswer.toLowerCase() === questions[currentQuestionIndex].answers[i].toLowerCase()) {
+      score++
+      currentstreak++
+      alert('✅ Correct!');
+      isRight = true;
+      break;
+    }
   }
-  //const correctAnswer = questions[currentQuestionIndex].answers;
-  console.log(correctAnswer);
-  if (userAnswer.toLowerCase() === String.prototype.toLowerCase.call(correctAnswer)) {
-    score++
-    currentstreak++
-    alert('✅ Correct!');
+  
+  if (isRight===true){
     if (currentstreak>longeststreak) {
       longeststreak=currentstreak
     }
-  } else {
+  } 
+    else {
     alert(`❌ Wrong! The correct answer was: ${correctAnswer}`);
     currentstreak=0
   }
-  if (userAnswer === '') {
-    return alert('Please answer');
+    if (userAnswer === '') {
+      return alert('Please answer');
   }
-
   currentQuestionIndex++;
   showQuestion();
-}
+}  
+
 
 document.getElementById('answer-input').addEventListener('keydown', function(e) {
   if (e.key === 'Enter') {
