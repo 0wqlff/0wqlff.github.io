@@ -19,3 +19,17 @@ for i in range(6000):
     goto(hearta(i)*20,heartb(i)*20)
     down()
     goto(0,0)
+
+
+# from dataclasses import dataclass
+
+# @dataclass
+# class hello:
+#     name:str
+#     age:int
+#     code:bool
+# tests=hello(name="Be",age=1,code=True)
+# test=[hello("","","") for i in range(100)]
+# test[87]
+# for i in range(len(test)):
+#     print(test[i].name)
